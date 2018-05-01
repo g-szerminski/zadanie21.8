@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
    
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://Mario:kodilla@ds129386.mlab.com:29386/database1', {
+mongoose.connect('mongodb://<szerman>:<szermanko2>@ds261969.mlab.com:61969/firstdb', {
     useMongoClient: true
 });
 
@@ -20,7 +20,7 @@ const userSchema = new Schema({
 
 //Mongoose schema method
 userSchema.methods.manify = function(next) {
-    this.name = this.name + '-boy';
+	this.name = this.name + '-boy';
 
     return next(null, this.name);
 };

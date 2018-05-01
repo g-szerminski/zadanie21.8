@@ -20,7 +20,7 @@ const userSchema = new Schema({
 
 //Mongoose schema method
 userSchema.methods.manify = function(next) {
-	this.name = this.name + '-boy';
+    this.name = this.name + '-boy';
 
     return next(null, this.name);
 };
